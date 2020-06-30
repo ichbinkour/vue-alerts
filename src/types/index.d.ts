@@ -1,8 +1,8 @@
 import Vue, { PluginFunction } from 'vue';
 // import { Store } from 'vuex';
 
-export class VuePlugin {
-  constructor(options?: VuePluginOptions);
+export class VueAlerts {
+  constructor(options?: VueAlertsOptions);
 
   static install(): PluginFunction<any>;
   // static init(Vue: Vue, store: Store<any>): void;
@@ -12,19 +12,19 @@ export class VuePlugin {
   world(): string;
 }
 
-export interface VuePluginOptions extends Object {
+export interface VueAlertsOptions extends Object {
   accessorName?: string
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $myPlugin: VuePlugin;
-    __$VuePluginInstance: VuePlugin;
+    $vueAlerts: VueAlerts;
+    __$VueAlertsInstance: VueAlerts;
   }
 }
 
 declare module 'vue/types/options' {
   interface ComponentOptions<V extends Vue> {
-    myPluginSettings?: VuePluginOptions | VuePlugin
+    vueAlertsSettings?: VueAlertsOptions | VueAlerts
   }
 }

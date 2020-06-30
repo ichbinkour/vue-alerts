@@ -2,17 +2,17 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import { storiesOf } from '@storybook/vue';
 
-import VuePlugin from '../src/vue-plugin';
+import VueAlerts from '../src/vue-alerts';
 
 Vue.use(Vuex);
-Vue.use(VuePlugin);
+Vue.use(VueAlerts);
 
 const withSettings = component => ({
-  myPluginSettings: new VuePlugin(),
+  vueAlertsSettings: new VueAlerts(),
   ...component
 });
 
-const stories = storiesOf('VuePlugin', module);
+const stories = storiesOf('VueAlerts', module);
 
 stories
   // Add some stories here to make your plugin more descriptive
@@ -22,17 +22,17 @@ stories
       withSettings({
         template: `
         <div>
-          <vue-plugin />
+          <vue-alerts />
         </div>
       `
       }),
     {
       notes: `
-        # Using \`vue-plugin\`
+        # Using \`vue-alerts\`
 
         \`\`\`html
         <template>
-          <vue-plugin />
+          <vue-alerts />
         </template>
         \`\`\`
       `
@@ -45,20 +45,20 @@ stories
         template: `
         <div>
           <b>Hello</b>
-          <vue-plugin />
+          <vue-alerts />
           <i>world</i>
         </div>
       `
       }),
     {
       notes: `
-        # Using \`vue-plugin\` with other components
+        # Using \`vue-alerts\` with other components
 
         \`\`\`html
         <template>
           <div>
             <b>Hello</b>
-            <vue-plugin />
+            <vue-alerts />
             <i>world</i>
           </div>
         </template>

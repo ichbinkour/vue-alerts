@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import VuePlugin from '@/vue-plugin';
+import VueAlerts from '@/vue-alerts';
 
 import App from './App.vue';
 
 Vue.use(Vuex);
-Vue.use(VuePlugin);
+Vue.use(VueAlerts);
 
 new Vue({
   el: '#app',
   store: new Vuex.Store(),
-  myPluginSettings: new VuePlugin(),
+  vueAlertsSettings: new VueAlerts(),
   render: createElement => createElement(App)
 });
