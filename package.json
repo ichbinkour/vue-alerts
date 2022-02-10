@@ -68,7 +68,7 @@
     "vuex": "^3.1.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   },
   "peerDependencies": {
     "vue": "^2.6.10"
